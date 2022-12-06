@@ -52,7 +52,26 @@ function squareClicked() {
     square1.style.background = square1.getAttribute("data-color");
   } else {
     square2.style.background = square2.getAttribute("data-color");
+    checkMatch();
   }
   // console.log(this);
+}
+
+function checkMatch() {
+  let match = square1.getAttribute("data-color") === square2.getAttribute("data-color");
+  if (!match) {
+    noMatch();
+  } else {
+    isMatch();
+  }
+}
+
+function noMatch() {
+  clickCount = 0;
+  console.log("no match");
+}
+function isMatch() {
+  clickCount = 0;
+  console.log("is a match");
 }
 
