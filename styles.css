@@ -32,10 +32,10 @@ button {
 
 ul {
   display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: repeat(4, 150px);
   gap: 10px;
-  padding: 0 20px;
+  padding: 0px 50px 150px 50px;
 }
 
 li {
@@ -80,6 +80,13 @@ li {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 800px) {
+  ul {
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
   }
 }
 
