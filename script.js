@@ -1,3 +1,8 @@
+const squaresContainer = document.querySelector('#squares');
+const numberOfSquares = 16;
+let i = 0;
+
+
 let colors = [
   "#33ff33",
   "#33ff33",
@@ -25,6 +30,13 @@ function selectColor() {
   return selected;
 }
 
-selectColor();
-selectColor();
-console.log(selectColor());
+while (i<numberOfSquares) {
+  const square = document.createElement('li');
+  const color = selectColor();
+  // square.style.background = color;
+  square.setAttribute("data-color", color);
+  squaresContainer.appendChild(square);
+  i++;
+}
+
+
